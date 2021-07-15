@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    let people = ["Finn", "Leia", "Luke", "Rey"]
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List(people, id: \.self) { person in
+            Text(person)
+        }
     }
 }
 
